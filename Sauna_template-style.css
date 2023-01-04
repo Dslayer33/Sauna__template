@@ -8,6 +8,7 @@ html {
   width: 100%;
   height: 100%;
   position: relative;
+  background-color: #F1F1F1;
 }
 
 .body {
@@ -83,7 +84,6 @@ html {
 .body .header {
   width: 100%;
   z-index: 3;
-  position: absolute;
   margin-top: 0.5rem;
   /* .text-viza {
        font-family:$font1;
@@ -250,10 +250,8 @@ html {
   color: #FFFFFF;
 }
 .body .main {
-  position: absolute;
-  top: 5rem;
-  -webkit-transform: translateY(5rem);
-          transform: translateY(5rem);
+  position: relative;
+  margin-top: 3rem;
   width: 100%;
   /* .text-media {
        position: absolute;
@@ -399,4 +397,285 @@ html {
   font-size: 1.6rem;
   line-height: 2rem;
   color: #FFFFFF;
+}
+.body .main .section-media {
+  width: 100%;
+  position: absolute;
+  top: 30rem;
+  -webkit-transform: translateY(30rem);
+          transform: translateY(30rem);
+}
+.body .main .section-media .media-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+}
+.body .main .section-media .media-block .block-text {
+  width: 100%;
+  position: relative;
+}
+.body .main .section-media .media-block .block-text .title-shadow {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 7rem;
+  color: #DFDFDF;
+  position: absolute;
+}
+.body .main .section-media .media-block .block-text .title-real {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.4rem;
+  line-height: 6rem;
+  color: #000000;
+  position: absolute;
+  top: 1.5rem;
+  -webkit-transform: translateY(1.5rem);
+          transform: translateY(1.5rem);
+}
+.body .main .section-media .media-block .block-text .title-real .real-color {
+  color: #FF7600;
+}
+.body .main .section-media .media-block .block-photo {
+  width: 100%;
+  position: absolute;
+  top: 8rem;
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+.body .main .section-media .media-block .block-photo .main-photo {
+  width: 100%;
+  height: 36rem;
+  background-image: url(../Sauna__template/img/media-main.jpg);
+  background-size: cover;
+  position: relative;
+}
+.body .main .section-media .media-block .block-photo .main-photo .main-icon {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.body .main .section-media .media-block .block-photo .main-photo .main-icon:hover {
+  cursor: pointer;
+}
+.body .main .section-media .media-block .block-photo .bottom-photos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.body .main .section-media .media-block .block-photo .bottom-photos .photo-item {
+  width: 20rem;
+  height: 12rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.body .main .section-media .media-block .block-photo .bottom-photos .photo-item:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  cursor: pointer;
+}
+.body .main .section-media .media-block .block-photo .btn-bottom {
+  width: 26.4rem;
+  height: 4.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #FF7600;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+@supports (gap: 4rem) {
+  .body .main .section-media .media-block .block-photo .btn-bottom {
+    margin-top: 0;
+  }
+}
+.body .main .section-media .media-block .block-photo .btn-bottom:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+.body .main .section-media .media-block .block-photo .btn-bottom:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.body .main .section-media .media-block .block-photo .btn-bottom .btn-text-bottom {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+}
+.body .main .section-conditions {
+  width: 100%;
+  height: 100rem;
+  background-image: url(../Sauna__template/img/tear-bg.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 70rem;
+  -webkit-transform: translateY(70rem);
+          transform: translateY(70rem);
+}
+.body .main .section-conditions .conditions-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+}
+.body .main .section-conditions .conditions-block .block-text-main {
+  width: 100%;
+  position: relative;
+}
+.body .main .section-conditions .conditions-block .block-text-main .title-shadow1 {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 7rem;
+  color: #DFDFDF;
+  position: absolute;
+}
+.body .main .section-conditions .conditions-block .block-text-main .title-real1 {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.4rem;
+  line-height: 6rem;
+  color: #000000;
+  position: absolute;
+  top: 1.5rem;
+  -webkit-transform: translateY(1.5rem);
+          transform: translateY(1.5rem);
+}
+.body .main .section-conditions .conditions-block .block-text-main .title-real1 .real-color1 {
+  color: #FF7600;
+}
+.body .main .section-conditions .conditions-block .conditions-box {
+  width: 100%;
+  margin-top: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  height: 24rem;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-img {
+  width: 28rem;
+  height: 100%;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-text .cond-title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  white-space: pre-line;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-text .list-itm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-text .list-itm .itm-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-text .list-itm .itm-point .point-text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: #000000;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  white-space: nowrap;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-text .list-itm .point-icon {
+  border: 0.2rem solid #FF7600;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .conditions-text .list--gap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .text--gap {
+  gap: 6rem;
+}
+.body .main .section-conditions .conditions-block .conditions-box .box-item .conditions-inf .text--gap2 {
+  gap: 2rem;
 }
