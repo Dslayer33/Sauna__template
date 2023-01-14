@@ -7,7 +7,7 @@ $color5:#000000;
 $color6:#FF7600;
 $color7:#DFDFDF;
 $color8:#F1F1F1;
-
+$color9:#E7E7E7;
 
 //fonts
 $font1:'Oswald', sans-serif;
@@ -579,7 +579,7 @@ html {
 
         .section-conditions {
             width: 100%;
-            height: 100rem;
+            height: 110rem;
             background-image: url(../Sauna__template/img/tear-bg.jpg);
             background-size: cover;
             //height: 100%;
@@ -724,6 +724,630 @@ html {
                 }
 
             }
+        }
+
+
+        .section-place {
+            width: 100%;
+            height: 60rem;
+            background-image: url(../Sauna__template/img/room-bg.jpg);
+            background-size: cover;
+            position: absolute;
+            top: 130rem;
+            transform: translateY(130rem);
+
+            .place-container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+
+                .place-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 70%;
+                    transform: translate(-70%,-50%);
+                    height: 50rem;
+                    width: 70rem;
+                    background: $color5;
+                    opacity: 0.8;
+                    backdrop-filter: blur(2.75rem);
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+
+
+                    .text-block {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        //text-align: center;
+
+                        .title-shadow2 {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 6rem;
+                            line-height: 6rem;
+                            color: $color8;
+                            opacity: 0.2;
+                            //position: absolute;
+                        }
+
+
+                        .title-real2 {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 3rem;
+                            line-height: 6rem;
+                            color: $color3;
+                            margin-top: -7rem;
+
+                            .real-color2 {
+                                color: $color6;
+                            }
+                        }
+                    }
+
+
+                    .paragraph-block {
+                        position: absolute;
+                        left: 50%;
+                        top: 8rem;
+                        transform: translate(-50%,8rem);
+                        width: 90%;
+
+                        font-family: $font2;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1.5rem;
+                        line-height: 2.5rem;
+                        color: $color3;
+
+
+                        .p-style {
+                            &:not(:first-child) {
+                                margin-top: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .section-stocks {
+            width: 100%;
+            height: 60rem;
+            position: absolute;
+            top: 165rem;
+            transform: translateY(165rem);
+            background-color: $color3;
+            //border: 0.1rem solid black;
+
+
+            .stocks-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 70%;
+                //border: 0.1rem solid black;
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+
+                .stocks-title {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    //position: relative;
+
+
+                    .stocks-shadow {
+                        font-family: $font1;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 6rem;
+                        line-height: 7rem;
+                        color: $color9;
+                        //position: absolute;
+                    }
+
+
+                    .stocks-real {
+                        font-family: $font1;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 3rem;
+                        line-height: 6rem;
+                        color: $color5;
+                        margin-top: -4rem;
+
+                        .stocks-color {
+                            color: $color6;
+                        }
+                    }
+                }
+
+                .stocks-content {
+                    display: flex;
+                    //justify-content: space-around;
+                    gap: 2rem;
+
+                    .content-block {
+                        width: 40rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        //transition: all .2s;
+                        //border: 0.1rem solid black;
+
+                        /*&:hover {
+                           transform: scale(1.2);
+                           border: 0.2rem solid  $color6;
+                           border-radius: 2rem;
+                           padding: 1rem;
+                           backface-visibility: hidden;
+                           cursor: pointer;
+                        }*/
+
+                        .stocks-img {
+                           height: 20rem;
+                           width: 100%;
+                        }
+
+                        .block-title {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 2rem;
+                            line-height: 3rem;
+                            color: $color5;
+                            white-space: nowrap;
+                        }
+
+
+                        .block-paragraph {
+                            font-family: $font2;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                            line-height: 2.5rem;
+                            color: $color5;
+                        }
+                    }
+                }
+
+
+                .stocks-warning {
+                    width: 70%;
+                    font-family: $font2;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                    color: $color5;
+                    justify-self: center;
+                    align-self: center;
+                    //white-space: pre-line;
+                    text-align: center;
+                }
+
+            }
+        }
+
+
+        //
+        .section-rest {
+            width: 100%;
+            height: 80rem;
+            position: absolute;
+            top: 200rem;
+            transform: translateY(200rem);
+            background-image: url(../Sauna__template/img/rest-bg.jpg);
+            background-size: cover;
+
+
+            .rest-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 75%;
+                height: 60rem;
+                display: flex;
+                gap: 2rem;
+                //border: 0.1rem solid black;
+
+
+                .rest-img {
+                    height: 100%;
+                    width: 45rem;
+                }
+
+
+                .rest-block {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .rest-title {
+                        display: flex;
+                        flex-direction: column;
+
+                        .rest-shadow {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 6rem;
+                            line-height: 6rem;
+                            color: $color9;
+                            white-space: pre-wrap;
+                        }
+
+                        .rest-real {
+                        font-family: $font1;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 3rem;
+                        line-height: 6rem;
+                        color: $color5;
+                        margin-top: -7.5rem;
+
+                          .rest-color {
+                            color: $color6;
+                          }
+                        } 
+                    }
+
+                    //
+                    .rest-main {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+
+                        .description-title {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 2rem;
+                            line-height: 3rem;
+                            color: $color5;
+                        }
+
+
+                        .description-main {
+                            font-family: $font2;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            line-height: 2.5rem;
+                            color: $color5;
+                            white-space: pre-line;
+                        }
+
+
+                        .description-list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+
+
+                            .dlist-item {
+                                display: flex;
+                                gap: 1rem;
+
+                                .desc-icon {
+                                    border: 0.2rem solid $color6;
+                                    border-radius: 50%;
+                                    padding: 0.5rem;
+                                    height: 1rem;
+                                    align-self: center;
+                                }
+
+
+                                .desc-text {
+                                    font-family: $font2;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 1.4rem;
+                                    line-height: 2rem;
+                                    align-self: center;
+                                }
+                            }
+                        }
+
+
+                        .description-bottom {
+                            font-family: $font2;
+                            font-style: italic;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            line-height: 2.5rem;
+                            color: $color5;
+                        }
+                    }
+
+
+
+                    //
+                    .rest-btn {
+                        width: 26.4rem;
+                        height: 4.5rem;
+                        background-color: $color6;
+                        border-radius: 0.5rem;
+                        border: none;
+                        transition: all .3s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            cursor: pointer;
+                        }
+            
+                        &:active {
+                            transform: scale(0.9);
+                        }
+
+                        .rest-text-btn {
+                            font-family:$font2;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 1.6rem;
+                            line-height: 2rem;
+                            color:$color3;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //
+        .section-set {
+            width: 100%;
+            height: 90rem;
+            position: absolute;
+            top: 245rem;
+            transform: translateY(245rem);
+            //border: 0.1rem solid black;
+            background-color: transparent;
+
+
+            .set-container {
+                width: 75%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                //border: 0.1rem solid black;
+                display: flex;
+                flex-direction: column;
+
+                .set-title {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .set-shadow {
+                        font-family: $font1;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 6rem;
+                        line-height: 7rem;
+                        color: $color7;
+                        //white-space: pre-line;
+                    }
+
+                    .set-real {
+                        font-family: $font1;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 3rem;
+                        line-height: 6rem;
+                        color: $color5;
+                        margin-top: -7.5rem;
+
+                          .set-color {
+                            color: $color6;
+                          }
+                    }
+                }
+
+                //
+                .set-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+                    margin-top: 5rem;
+
+
+                    &__box {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .box-inside {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+
+                            .inside-img {
+                                width: 30rem;
+                                height: 20rem;
+                                border-radius: 0.5rem;
+                            }
+
+
+                            .inside-title {
+                                font-family: $font1;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 2rem;
+                                line-height: 3rem;
+                                color: $color5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //
+        .section-bar {
+           width: 100%;
+           height: 80rem;
+           background-image: url(../Sauna__template/img/bar-bg.jpg);
+           background-size: 100% 100%;
+           position: absolute;
+           top: 295rem;
+           transform: translateY(295rem);
+
+
+           &__container {
+               width: 100%;
+               height: 100%;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+
+
+
+               .bar-title {
+                   display: flex;
+                   flex-direction: column;
+                   justify-self: center;
+                   align-self: center;
+
+
+                   .bar-shadow {
+                    font-family: $font1;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 6rem;
+                    line-height: 7rem;
+                    color: $color8;
+                    opacity: 0.2;
+                   }
+
+
+                   .bar-real {
+                    font-family: $font1;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 3rem;
+                    line-height: 6rem;
+                    color: $color3;
+                    justify-self: center;
+                    align-self: center;
+                    margin-top: -4.2rem;
+
+                      .bar-color {
+                        color: $color6;
+                      }
+                   }
+               }
+
+               .bar-warning {
+                   width: 100%;
+                   text-align: center;
+                   white-space: pre-line;
+                   font-family: $font2;
+                   font-style: italic;
+                   font-weight: 600;
+                   font-size: 1.5rem;
+                   line-height: 2.5rem;
+                   color: $color3;
+                   margin-top: -10rem;
+               }
+
+
+               .bar-icons {
+                   display: flex;
+                   gap: 2rem;
+                   justify-self: center;
+                   align-self: center;
+                   margin-top: -16rem;
+
+                   .bar-i {
+                       width: 5rem;
+                       height: 5rem;
+                       border-radius: 0.5rem;
+                       transition: all .2s;
+
+                       &:hover {
+                           cursor: pointer;
+                           transform: scale(1.2);
+                       }
+                   }
+               }
+
+
+               .bar-items {
+                   display: flex;
+                   justify-self: center;
+                   align-self: center;
+                   width: 90%;
+                   justify-content: space-between;
+                   margin-top: -15rem;
+
+
+                   .content-item {
+                       background-color: $color5;
+                       opacity: 0.7;
+                       border-radius: 0.5rem;
+                       display: flex;
+                       gap: 2rem;
+                       height: 4rem;
+                       align-items: center;
+                       justify-items: center;
+                       padding: 2rem;
+
+                       .bar-vector {
+                           padding: 0.5rem;
+                           height: 2rem;
+                           width: 2rem;
+                           border: 0.3rem solid $color6;
+                           border-radius: 50%;
+                       }
+
+                       .bar-text {
+                           font-family: $font2;
+                           font-style: normal;
+                           font-weight: 600;
+                           font-size: 1.5rem;
+                           line-height: 1.8rem;
+                           color: $color3;
+                       }
+
+                   }
+
+
+                   .content--top1 {
+                       margin-top: -10rem;
+                   }
+
+                   .content--top2 {
+                       margin-top: -7rem;
+                   }
+
+                   .content--top3 {
+                    margin-top: 3rem;
+                   }
+
+                   .content--top4 {
+                    margin-top: -5rem;
+                   }
+
+               }
+ 
+
+           }
         }
 
     }
