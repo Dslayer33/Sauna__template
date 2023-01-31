@@ -17,16 +17,18 @@
        
 
         <link rel="stylesheet" href="Sauna_template-style.css">
+
+        <link rel="stylesheet"  type="text/css"   href="modals/_Sauna-modal-style.css">
+
+        <script defer src="scripts/Sauna-scripts.js"></script>
     </head>
 
 
     <body class="body">
-       <!-- <img src="img/Group4.png" alt="img" class="smoke-img-top">
-        <img src="img/Group2.png" alt="img" class="smoke-img-bottom">
-        <img src="img/Group1.png" alt="img" class="smoke-img-bottom2"> -->
+      
       
 
-        <header class="header">
+        <header class="header" id="sauna-header">
            <div class="header__container">
               <!-- <h2 class="text-viza">Viza</h2> -->
               <img src="icons/Sauna-icon.svg" alt="icon" class="header-icon">
@@ -129,7 +131,8 @@
 
 
             <section class="section-conditions">
-                <div class="conditions-block">
+               <div class="section-conditions__container">
+                 <div class="conditions-block">
                     <div class="block-text-main">
                         <h1 class="title-shadow1">Что получит дорогой гость</h1>
                         <p class="title-real1"><span class="real-color1">Что получит</span> дорогой гость</p>
@@ -292,7 +295,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                 </div>
+               </div>
+
+               
             </section>
 
             
@@ -506,12 +512,437 @@
                  </div>
 
             </section>
+
+
+            <section class="section-hotel">
+                <div class="section-hotel__container">
+                    <img src="img/statue-img.jpg" alt="img" class="hotel-statue" >
+
+
+
+                    <div class="hotel-content-box">
+                        <div class="box-photos">
+                            <div class="big-item">
+                                <button class="deal-btn-hotel">
+                                     <p class="deal-btn-text">От 1000 рублей</p>
+                                </button>
+                            </div>
+
+                          
+                            <div class="small-items">
+                                <img src="img/hotel-img2.jpg" alt="img" class="small-img">
+                                <img src="img/hotel-img3.jpg" alt="img" class="small-img">
+                                <img src="img/hotel-img4.jpg" alt="img" class="small-img">
+                                <img src="img/hotel-img5.jpg" alt="img" class="small-img">
+                            </div>
+                        </div>
+
+
+                        <div class="box-text">
+                            <div class="box-text__main">
+                                <h1 class="hotel-shadow">Гостиничный номер</h1>
+                                <p class="hotel-real">Гостиничный <span class="hotel-color">номер</span></p>
+                            </div>
+
+
+                            <div class="hotel-text-deal">
+                                Вы можете снять гостиничный номер без аренды сауны.
+                                <P> Приглушенная музыка и лаконичный стиль с первых минут перенесут Вас в атмосферу спокойствия и отдыха.</P> 
+                                
+                               <p class="text-deal--p">В номере найдется все, что нужно:</p>
+                            </div>
+
+
+                            <div class="hotel-items">
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">1 кровать размером 200*200</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Комплект белья из сатина</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Плазменный телевизор</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Телефон</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Фен</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Сейф</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Мини-бар</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Станция для приготовления чая и кофе</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Ванная комната с душевой</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Банные принадлежности</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Центральная система климат-контроля</p>
+                                </div>
+
+                                <div class="item-box">
+                                    <img src="icons/Vector.svg" alt="icon" class="hotel-vector">
+                                    <p class="box-text">Wi-Fi</p>
+                                </div>
+                            </div>
+
+
+                            <button class="hotel-bottom-btn">
+                               <p class="bottom-btn-text">Забронировать номер</p>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-party">
+                <div class="section-party__container">
+                    <div class="party-content-box">
+                        <div class="box-title-text">
+                            <h1 class="party-shadow">Место для незабываемой 
+                                вечеринки</h1>
+                            <p class="party-real">Место для <span class="party-color">незабываемой вечеринки</span></p>
+                        </div>
+
+
+
+                        <div class="box-party-main">
+                            <div class="main-block">
+                                <div class="flex-content">
+                                     <img src="img/party-img1.jpg" alt="img" class="party-img">
+                                     <p class="party-p">День рождения</p>
+                                </div>
+
+                                <div class="flex-content--text">
+                                  <p class="flex-paragraph">Сауна, хамам, бильярд, караоке, бассейн, авторские коктейли сделают Ваш праздник ярким и полным эмоций.</p>
+
+                                  <p class="flex-paragraph">А самый радушный персонал Казани окажет Вам по-настоящему горячий прием.</p>
+                                </div>
+
+                                <div class="flex-content">
+                                    <img src="img/party-img2.jpg" alt="img" class="party-img">
+                                    <p class="party-p">Новый год</p>
+                                </div>
+                            </div>
+
+
+                            <div class="main-block">
+                                <div class="flex-content">
+                                    <img src="img/party-img3.jpg" alt="img" class="party-img">
+                                    <p class="party-p">Семейный отдых</p>
+                                </div>
+
+                                <div class="flex-content">
+                                    <img src="img/party-img4.jpg" alt="img" class="party-img">
+                                    <p class="party-p">Встреча с друзьями</p>
+                                </div>
+
+                                <div class="flex-content">
+                                    <img src="img/party-img5.jpg" alt="img" class="party-img">
+                                    <p class="party-p">Мальчишник/Девичник</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="section-questions">
+                <div class="section-questions__container">
+                     <div class="questions-content">
+                         <div class="questions-text-title">
+                            <h1 class="questions-shadow">Часто задаваемые
+                                вопросы</h1>
+                            <p class="questions-real">Часто задаваемые <span class="questions-color">вопросы</span></p>
+                         </div>
+
+
+                         <div class="questions-text-main">
+                             <h1 class="main-block-title">Можно ли приходить со своим алкоголем?</h1>
+
+                             <p class="main-block-warning">А также диаграммы связей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут функционально разнесены на независимые элементы. Однозначно, некоторые особенности внутренней политики смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что реализация намеченных плановых заданий говорит о возможностях приоретизации разума над эмоциями.</p>
+                         </div>
+
+
+                         <div class="questions-text-points">
+                             <div class="point-flex">
+                                 <h1 class="flex-text-item">Есть ли у вас банные принадлежности?</h1>
+                                 <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">Можно ли париться вениками?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">Сколько человек вмещает?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">У вас есть кальян?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">До какой температуры разогревается сауна?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">Что у вас есть в меню?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">Можно ли заказать к вам еду?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">За сколько дней можно забронировать?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+
+                             <div class="point-flex">
+                                <h1 class="flex-text-item">Какие у вас есть акции?</h1>
+                                <img src="icons/plus.svg" alt="icon" class="flex-icon-item">
+                             </div>
+                         </div>
+
+                     </div>
+                </div>
+            </section>
+
+
+            <section class="section-comment">
+                <div class="section-comment__container">
+                    <div class="comment-content">
+                        <div class="comment-title-text">
+                            <h1 class="comment-shadow">Отзывы клиентов</h1>
+                            <p class="comment-real"><span class="comment-color">Отзывы</span> клиентов</p>
+                        </div>
+
+                        <div class="comment-form-block">
+                            <form action="#" method="post" class="comment-form">
+                                <input class="form-comment-imput" type="text" name="Text">
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="section-contacts">
+                <div class="section-contacts__container">
+                    <div class="contacts-content">
+                        <div class="contacts-text-block">
+                            <div class="block-main-title">
+                                <h1 class="contacts-shadow">Контакты</h1>
+                                <p class="contacts-real">Контакты</p>
+                            </div>
+
+                            <h1 class="block-main-tel">8(843)-259-00-99</h1>
+
+                            <p class="block-main-adress">24/7,  г. Казань, ул. Минская д.12</p>
+
+                            <div class="block-main-links">
+                                <div class="link-flex-block">
+                                     <img src="icons/tel-white-icon.svg" alt="icon" class="link-icon">
+                                     <p class="link-title">Telegram</p>
+                                </div>
+
+                                <div class="link-flex-block">
+                                    <img src="icons/what-white-icon.svg" alt="icon" class="link-icon">
+                                    <p class="link-title">WhatsApp</p>
+                                </div>
+
+                                <div class="link-flex-block">
+                                    <img src="icons/ins-white-icon.svg" alt="icon" class="link-icon">
+                                    <p class="link-title">Instagram</p>
+                                </div>
+
+                                <div class="link-flex-block">
+                                    <img src="icons/vk-white-icon.svg" alt="icon" class="link-icon">
+                                    <p class="link-title">Vkontakte</p>
+                                </div>
+                            </div>
+
+                            <button class="contacts-btn">
+                                <p class="contacts-btn__text">Забронировать</p>
+                            </button>
+                        </div>
+
+
+                        <img src="img/map-img.jpg" alt="img" class="contacts-map-img">
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="main-modal" id="main-modal">
+                <div class="main-modal__container">
+                    <div class="main-modal-block">
+                        <a href="#" class="main-modal-x">&times;</a>
+
+
+                        <div class="main-modal-content">
+                            <h1 class="main-modal-title">Заказать звонок</h1>
+
+
+                            <p class="main-modal-paragraph">Оставьте заявку и наш администратор свяжется
+                                с вами и ответит на все волнующие вопросы</p>
+
+
+
+
+                            <div class="main-modal-forms">
+                               
+                                <input type="text" required  name="Name" class="main-form-item" placeholder="Ваше имя">
+
+                                <input type="tel" required name="Tel" class="main-form-item" placeholder="Ваш номер телефона">
+
+                                <button class="main-form-btn">
+                                    <p class="mainf-btn-text">Отправить</p>
+                                </button>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+
+
+           <div class="order-modal">
+               <div class="order-modal__container">
+                   <div  class="order-modal-block   flex-bg1">
+                       <p  class="order-modal-x">&times;</p>
+
+                        <div class="order-modal-content">
+                             <h1 class="order-modal-title">Заказать звонок</h1>
+
+                             <p class="order-modal-support">Оставьте заявку и наш администратор свяжется
+                                с вами и ответит на все волнующие вопросы</p>
+
+
+                             <div class="order-forms-content">
+                                <input type="text" required  name="Name" class="order-form-item" placeholder="Ваше имя">
+
+                                <input type="tel" required name="Tel" class="order-form-item" placeholder="Ваш номер телефона">
+
+                                <button class="order-form-btn">
+                                    <p class="orderf-btn-text">Отправить</p>
+                                </button>
+                             </div>
+                        </div>
+
+                   </div>
+
+                   <div class="order-modal-block  flex-bg2">
+                       <p  class="order-modal-x" id="omx-1">&times;</p>
+
+                        <div class="order-modal-content">
+                            <h1 class="order-modal-title">Забронировать номер</h1>
+
+                            <p class="order-modal-support">Оставьте заявку и наш администратор свяжется
+                                с вами и ответит на все волнующие вопросы</p>
+
+
+                                <div class="order-forms-content">
+                                    <input type="text" required  name="Name" class="order-form-item" placeholder="Ваше имя">
+
+                                    <input type="tel" required name="Tel" class="order-form-item" placeholder="Ваш номер телефона">
+    
+                                    <button class="order-form-btn">
+                                        <p class="orderf-btn-text">Отправить</p>
+                                    </button>
+                                </div>
+                        </div>
+
+                   </div>
+
+                   <div class="order-modal-block  flex-bg3">
+                       <p  class="order-modal-x" id="omx-2">&times;</p>
+
+                       <div class="order-modal-content">
+                           <h1 class="order-modal-title">Забронировать</h1>
+
+                           <p class="order-modal-support">Оставьте заявку и наш администратор свяжется
+                            с вами и ответит на все волнующие вопросы</p>
+
+
+                            <div class="order-forms-content">
+                                <input type="text" required  name="Name" class="order-form-item" placeholder="Ваше имя">
+
+                                <input type="tel" required name="Tel" class="order-form-item" placeholder="Ваш номер телефона">
+
+                                <button class="order-form-btn">
+                                    <p class="orderf-btn-text">Отправить</p>
+                                </button>
+                            </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+
+
+           <div class="scroll-btn">
+               <div class="scroll-btn__container">
+                   <div class="scroll-btn-content">
+                       <p class="scroll-btn-arr">&UpArrow;</p>
+                   </div>
+               </div>
+           </div>
         </main>
 
 
-               
+        
+
+
+        
     </body>
 
 
-   
+    
 </html>

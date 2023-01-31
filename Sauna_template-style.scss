@@ -1,3 +1,8 @@
+
+@import "modals/Sauna-modal-style.scss";
+
+
+
 //colors
 $color1:#EA8F41;
 $color2:#626262;
@@ -8,6 +13,8 @@ $color6:#FF7600;
 $color7:#DFDFDF;
 $color8:#F1F1F1;
 $color9:#E7E7E7;
+$color0:#F5F5F5;
+
 
 //fonts
 $font1:'Oswald', sans-serif;
@@ -17,6 +24,7 @@ $font2: 'Montserrat', sans-serif;
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -36,6 +44,8 @@ html {
     z-index: 1;
     width: 100%;
     height: 100%;
+
+    
 
     .ph-arrow-circle-left {
         //z-index: 2;
@@ -72,40 +82,7 @@ html {
     }
    
 
-   /* .smoke-img-top {
-        //border: 0.1rem solid black;
-        width: 100%;
-        height: 25rem;
-        position: absolute;
-        z-index: 2;
-    }
-
-    .smoke-img-bottom {
-        //border: 0.1rem solid black;
-        width: 50%;
-        height: 25rem;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        -ms-transform:translate(0,-100%);
-        -webkit-transform:translate(0,-100%);
-        transform: translate(0,-100%);
-
-    }
-
-
-    .smoke-img-bottom2 {
-         //border: 0.1rem solid black;
-         width: 50%;
-         height: 25rem;
-         position: absolute;
-         top: 100%;
-         left: 0;
-         -ms-transform:translate(0,-100%);
-         -webkit-transform:translate(0,-100%);
-         transform: translate(0,-100%);
- 
-     }*/
+   
 
 
 
@@ -282,7 +259,6 @@ html {
 
        
 
-
         .main__container {
             position: absolute;
             left: 10rem;
@@ -303,6 +279,9 @@ html {
             line-height: 8rem;
              color:$color3;
             white-space: normal;
+    
+           
+            
 
             &__title {
                 color:$color6;
@@ -312,6 +291,9 @@ html {
                 }
             }
         }
+
+
+        
 
         .main-list {
             display: flex;
@@ -408,20 +390,7 @@ html {
         }
 
 
-       /* .text-media {
-            position: absolute;
-            left: 10rem;
-            top: 40rem;
-            transform: translate(10rem,40rem);
-            font-family:$font1;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 4rem;
-            line-height: 7rem;
-            color:$color5;
-            //border: 0.1rem solid black;
-            padding-bottom: 5rem;
-        }*/
+      
 
 
         .section-media {
@@ -429,7 +398,7 @@ html {
             //height: 100%;
             //margin-top: 20rem;
             position: absolute;
-            top: 30rem;
+            top: 35rem;
             transform: translateY(30rem);
             //background-color: $color8;
         
@@ -443,7 +412,9 @@ html {
         
                 .block-text {
                     width: 100%;
-                    position: relative;
+                    //position: relative;
+                    display: flex;
+                    flex-direction: column;
         
                     .title-shadow {
                         font-family: $font1;
@@ -452,7 +423,6 @@ html {
                         font-size: 6rem;
                         line-height: 7rem;
                         color: $color7;
-                        position: absolute;
                     }
 
 
@@ -463,9 +433,9 @@ html {
                         font-size: 3.4rem;
                         line-height: 6rem;
                         color: $color5;
-                        position: absolute;
-                        top: 1.5rem;
-                        transform: translateY(1.5rem);
+                        //position: absolute;
+                        margin-top: -4rem;
+                       
 
                         .real-color {
                             color: $color6;
@@ -491,6 +461,8 @@ html {
                         height:36rem;
                         background-image: url(../Sauna__template/img/media-main.jpg);
                         background-size: cover;
+                        border-radius: 0.5rem;
+                        border: none;
                         position: relative;
 
 
@@ -524,6 +496,8 @@ html {
                             width: 20rem;
                             height: 12rem;
                             transition: all .2s;
+                            border-radius: 0.5rem;
+                            border: none;
 
 
                             &:hover {
@@ -580,6 +554,7 @@ html {
         .section-conditions {
             width: 100%;
             height: 110rem;
+            //height: 100rem;
             background-image: url(../Sauna__template/img/tear-bg.jpg);
             background-size: cover;
             //height: 100%;
@@ -589,20 +564,28 @@ html {
             transform: translateY(70rem);
             //border: 0.1rem solid black;
 
+             &__container {
+                 position: relative;
+                 width: 100%;
+                 height: 100%;
+             }
+
 
             .conditions-block {
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%,-40%);
                 width: 80%;
                 //padding: 1rem;
                 //height: 80rem;
-                //border: 0.1rem solid black;
+               
 
                 .block-text-main {
                     width: 100%;
-                    position: relative;
+                    //position: relative;
+                    display: flex;
+                    flex-direction: column;
 
 
                     .title-shadow1 {
@@ -612,7 +595,7 @@ html {
                         font-size: 6rem;
                         line-height: 7rem;
                         color: $color7;
-                        position: absolute;
+                        //position: absolute;
                     }
 
 
@@ -623,9 +606,7 @@ html {
                         font-size: 3.4rem;
                         line-height: 6rem;
                         color: $color5;
-                        position: absolute;
-                        top: 1.5rem;
-                        transform: translateY(1.5rem);
+                        margin-top: -4rem;
 
                         .real-color1 {
                             color: $color6;
@@ -635,7 +616,7 @@ html {
 
                 .conditions-box {
                     width: 100%;
-                    margin-top: 12rem;
+                    margin-top: 6rem;
                     display: flex;
                     flex-direction: column;
                     gap: 4rem;
@@ -653,6 +634,8 @@ html {
                             .conditions-img {
                                 width: 28rem;
                                 height: 100%;
+                                border-radius: 0.5rem;
+                                border: none;
                             }
 
 
@@ -753,6 +736,7 @@ html {
                     opacity: 0.8;
                     backdrop-filter: blur(2.75rem);
                     border-radius: 0.5rem;
+                    border: none;
                     padding: 1rem;
 
 
@@ -899,6 +883,8 @@ html {
                         .stocks-img {
                            height: 20rem;
                            width: 100%;
+                           border-radius: 0.5rem;
+                           border: none;
                         }
 
                         .block-title {
@@ -968,6 +954,8 @@ html {
                 .rest-img {
                     height: 100%;
                     width: 45rem;
+                    border-radius: 0.5rem;
+                    border: none;
                 }
 
 
@@ -1046,7 +1034,8 @@ html {
                                     border: 0.2rem solid $color6;
                                     border-radius: 50%;
                                     padding: 0.5rem;
-                                    height: 1rem;
+                                    // height: 2rem;
+                                    // width: 2rem;
                                     align-self: center;
                                 }
 
@@ -1306,12 +1295,12 @@ html {
                        height: 4rem;
                        align-items: center;
                        justify-items: center;
-                       padding: 2rem;
+                       padding: 3rem;
 
                        .bar-vector {
                            padding: 0.5rem;
-                           height: 2rem;
-                           width: 2rem;
+                        //    height: 2rem;
+                        //    width: 2rem;
                            border: 0.3rem solid $color6;
                            border-radius: 50%;
                        }
@@ -1350,6 +1339,729 @@ html {
            }
         }
 
+
+        //
+        .section-hotel {
+            width: 100%;
+            height: 130rem;
+            background-color: $color3;
+            position: absolute;
+            top: 340rem;
+            transform: translateY(340rem);
+
+
+            &__container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .hotel-statue {
+                    width: 40rem;
+                    height: 60rem;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+
+
+                .hotel-content-box {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    display: flex;
+                    gap: 2rem;
+
+
+                    .box-photos {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        width: 60rem;
+
+
+                        .big-item {
+                            background-image: url(../Sauna__template/img/hotel-img1.jpg);
+                            height: 60rem;
+                            background-size: cover;
+                            border-radius: 0.5rem;
+                            position: relative;
+
+
+
+                            .deal-btn-hotel {
+                                width: 15.2rem;
+                                height: 6rem;
+                                background-color: $color6;
+                                opacity: 0.7;
+                                border-radius: 0.5rem;
+                                border: none;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                margin-top: 3rem;
+                                margin-right: 2rem;
+                                transition: all .2s;
+
+
+                                &:hover {
+                                    cursor: pointer;
+                                    transform: scale(1.1);
+                                }
+
+                                .deal-btn-text {
+                                    font-family: $font2;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 1.5rem;
+                                    line-height: 1.8rem;
+                                    color: $color3;
+                                }
+                            }
+
+                        }
+
+
+                        .small-items {
+                            display: flex;
+                            //justify-content: space-between;
+                            gap: 1rem;
+
+                            .small-img {
+                                height: 10rem;
+                                width: 14rem;
+                                border-radius: 0.5rem;
+                            }
+                        }
+                    }
+
+
+                    //
+                    .box-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4rem;
+
+
+                        &__main {
+                            display: flex;
+                            flex-direction: column;
+
+
+                            .hotel-shadow {
+                                font-family: $font1;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 6rem;
+                                line-height: 7rem;
+                                color: $color7;
+                            }
+
+                            .hotel-real {
+                                font-family: $font1;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 3rem;
+                                line-height: 6rem;
+                                color: $color5;
+                                margin-top: -8rem;
+            
+                                  .hotel-color {
+                                    color: $color6;
+                                  }
+                            }
+
+                        }
+
+
+                        .hotel-text-deal {
+                            font-family: $font2;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            line-height: 2.5rem;
+                            color: $color5;
+
+
+                            .text-deal--p {
+                                margin-top: 4rem;
+                            }
+                        }
+
+
+                        .hotel-items {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+
+
+                            .item-box {
+                                display: flex;
+                                gap: 1rem;
+
+
+                                .hotel-vector {
+                                    padding: 0.5rem;
+                                    border: 0.3rem solid $color6;
+                                    border-radius: 50%;
+                                    // width: 2rem;
+                                    // height: 2rem;
+                                }
+
+                                .box-text {
+                                    font-family: $font2;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 1.5rem;
+                                    line-height: 2.5rem;
+                                    color: $color5;
+                                    white-space: nowrap;
+                                    align-self: center;
+                                }
+
+                            }
+                        }
+
+
+                        .hotel-bottom-btn {
+                            width: 26.4rem;
+                            height: 4.5rem;
+                            background-color: $color6;
+                            border-radius: 0.5rem;
+                            border: none;
+                            transition: all .3s;
+
+                            &:hover {
+                                cursor: pointer;
+                                transform: scale(1.2);
+                            }
+
+                            &:active {
+                                transform: scale(0.9);
+                            }
+
+
+                            .bottom-btn-text {
+                                font-family: $font2;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 1.6rem;
+                                line-height: 2rem;
+                                color: $color3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //
+        .section-party {
+            width: 100%;
+            height: 90rem;
+            background-color: transparent;
+            position: absolute;
+            top: 410rem;
+            transform: translateY(410rem);
+            //border: 0.1rem solid black;
+
+
+            &__container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+
+
+                .party-content-box {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 75%;
+                    //border: 0.1rem solid black;
+
+                    .box-title-text {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+
+
+                        .party-shadow {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 6rem;
+                            line-height: 6rem;
+                            color: $color7;
+                            white-space: pre-line;
+                        }
+
+                        .party-real {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 3rem;
+                            line-height: 6rem;
+                            color: $color5;
+                            margin-top: -7rem;
+        
+                              .party-color {
+                                color: $color6;
+                              }
+                        }
+                    }
+
+
+
+                    .box-party-main {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4rem;
+                        margin-top: 6rem;
+
+
+                        .main-block {
+                            display: flex;
+                            justify-content: space-between;
+
+
+                            .flex-content {
+                               display: flex;
+                               flex-direction: column;
+                               gap: 2rem;
+
+
+                               .party-img {
+                                   width: 30rem;
+                                   height: 20rem;
+                                   border-radius: 0.5rem;
+                                   border: none;
+                               }
+
+
+                               .party-p {
+                                   font-family: $font1;
+                                   font-style: normal;
+                                   font-weight: 600;
+                                   font-size: 2rem;
+                                   line-height: 3rem;
+                                   color: $color5;
+                               }
+                            }
+
+                            .flex-content--text {
+                              display: flex;
+                              flex-direction: column;
+                              gap: 2rem;
+                              text-align: center;
+                              padding: 2rem 0;
+                              
+
+                              .flex-paragraph {
+                                  font-family: $font2;
+                                  font-style: normal;
+                                  font-weight: 600;
+                                  font-size: 1.5rem;
+                                  line-height: 2.5rem;
+                                  color: $color5;
+                              }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+
+
+        //
+         .section-questions {
+            width: 100%;
+            height: 150rem;
+            background-color: $color3;
+            position: absolute;
+            top: 460rem;
+            transform: translateY(460rem);
+            //border: 0.1rem solid black;
+
+
+            &__container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+
+                .questions-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 75%;
+                    display: flex;
+                    flex-direction: column;
+                    //border: 0.1rem solid black;
+
+                    .questions-text-title {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        
+
+
+                        .questions-shadow {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 6rem;
+                            line-height: 6rem;
+                            color: $color7;
+                            white-space: pre-line;
+                        }
+
+
+                        .questions-real {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 3rem;
+                            line-height: 6rem;
+                            color: $color5;
+                            margin-top: -7rem;
+        
+                              .questions-color {
+                                color: $color6;
+                              }
+                        }
+                    }
+
+
+                    
+                    .questions-text-main {
+                       display: flex;
+                       flex-direction: column;
+                       margin-top: 5rem;
+                       gap: 3rem;
+
+                       .main-block-title {
+                          font-family: $font1;
+                          font-style: normal;
+                          font-weight: 600;
+                          font-size: 2rem;
+                          line-height: 3rem;
+                          color: $color1;
+                       }
+
+                       .main-block-warning {
+                          font-family: $font2;
+                          font-style: normal;
+                          font-weight: 600;
+                          font-size: 1.5rem;
+                          line-height: 2.5rem;
+                          color: $color5;
+                       }
+
+                    }
+
+
+                    
+                    .questions-text-points {
+                       //width: 100%;
+                       display: flex;
+                       flex-direction: column;
+                       margin-top: 3rem;
+
+
+                       .point-flex {
+                           display: flex;
+                           width: 100%;
+                           border-top: 0.1rem solid #BDBDBD;
+                           border-bottom:  0.1rem solid #BDBDBD;
+                           padding: 3rem 0;
+                           justify-content: space-between;
+
+                           &:not(:first-child) {
+                              border-top: none;
+                           }
+
+                           .flex-text-item {
+                               font-family: $font1;
+                               font-style: normal;
+                               font-weight: 600;
+                               font-size: 2rem;
+                               line-height: 3rem;
+                               color: $color5;
+                               align-self: center;
+                               //justify-self: left;
+                           }
+
+
+                           .flex-icon-item {
+                               width: 2rem;
+                               height: 2rem;
+                               align-self: center;
+                               margin-right: 2rem;
+                               //justify-self: right;
+                           }
+
+                       }
+                    }
+                }
+            }
+         }
+
+
+         //
+         .section-comment {
+            width: 100%;
+            height: 80rem;
+            background-color: transparent;
+            position: absolute;
+            top: 540rem;
+            transform: translateY(540rem);
+            //border: 0.1rem solid black;
+
+
+             &__container {
+                 width: 100%;
+                 height: 100%;
+                 position: relative;
+
+
+                 .comment-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 75%;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .comment-title-text {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+
+
+                        .comment-shadow {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 6rem;
+                            line-height: 6rem;
+                            color: $color7;
+                        }
+
+
+                        .comment-real {
+                            font-family: $font1;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 3rem;
+                            line-height: 6rem;
+                            color: $color5;
+                            margin-top: -3.5rem;
+        
+                              .comment-color {
+                                color: $color6;
+                              }
+                        }
+
+
+
+                    }
+
+
+                    .comment-form-block {
+                       margin-top: 6rem;
+                      
+                       
+
+                       .form-comment-imput {
+                           width: 100%;
+                           height: 40rem;
+                           background-color: $color3;
+                           border-radius: 0.5rem;
+                           border: none;
+                          
+
+
+                           &:hover {
+                               cursor: text;
+                           }
+                       }
+                    }
+
+
+                 }
+             }
+         }
+
+
+         //
+         .section-contacts {
+            display: block;  
+            width: 100%;
+            height: 80rem;
+            background-image: url(../Sauna__template/img/contacts-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 585rem;
+            transform: translateY(585rem);
+
+
+            &__container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+
+                .contacts-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 75%;
+                    height: 50rem;
+                    display: flex;
+                    //border: 0.1rem solid white;
+
+
+                    .contacts-text-block {
+                        display: flex;
+                        flex-direction: column;
+
+
+                        .block-main-title {
+                            display: flex;
+                            flex-direction: column;
+
+
+                            .contacts-shadow {
+                              font-family: $font1;
+                              font-style: normal;
+                              font-weight: 600;
+                              font-size: 6rem;
+                              line-height: 6rem;
+                              color: $color8;
+                              opacity: 0.2;
+                            }
+
+
+                            .contacts-real {
+                                font-family: $font1;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 3rem;
+                                line-height: 6rem;
+                                color: $color3;
+                                margin-top: -3.5rem;
+                            }
+                        }
+
+
+                        .block-main-tel {
+                            font-family: $font2;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 2rem;
+                            color: $color3;
+                            margin-top: 1.5rem;
+                            line-height: 2.9rem;
+                        }
+
+
+                        .block-main-adress {
+                            font-family: $font2;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            line-height: 2.5rem;
+                            color: $color3;
+                            margin-top: 1.5rem;
+                        }
+
+
+                        .block-main-links {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 3rem;
+                            margin-top: 4rem;
+                            margin-left: 1rem;
+
+                            .link-flex-block {
+                                display: flex;
+                                gap: 3rem;
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                                
+
+
+                                .link-icon {
+                                   width: 3rem;
+                                   height: 3rem;
+                                }
+
+                                .link-title {
+                                   font-family: $font1;
+                                   font-style: normal;
+                                   font-weight: 600;
+                                   font-size: 1.5rem;
+                                   line-height: 3rem;
+                                   color: $color3;
+                                }
+                            }
+                        }
+
+
+                        .contacts-btn {
+                            width: 26.4rem;
+                            height: 4.5rem;
+                            background-color: $color6;
+                            border-radius: 0.5rem;
+                            border: none;
+                            margin-top: 3rem;
+                            transition: all .3s;
+
+                            &:hover {
+                                cursor: pointer;
+                                transform: scale(1.1);
+                            }
+
+                            &:active {
+                                transform: scale(0.9);
+                            }
+
+
+                            &__text {
+                                font-family: $font2;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 1.5rem;
+                                line-height: 2rem;
+                                color: $color3;
+                            }
+                        }
+                    }
+
+
+                    
+                    .contacts-map-img {
+                       height: 100%;
+                       width: 64.5rem;
+                       border-radius: 0.5rem;
+                       border: none;
+                       margin-left: 7rem;
+
+                      
+                    }
+                }
+            }
+         }
     }
 
 
