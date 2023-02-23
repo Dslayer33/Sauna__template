@@ -1,5 +1,6 @@
-
+@use "adaptive/Sauna-adaptive";
 @import "modals/Sauna-modal-style.scss";
+
 
 
 
@@ -9,7 +10,7 @@ $color2:#626262;
 $color3:#FFFFFF;
 $color4:#505050;
 $color5:#000000;
-$color6:#FF7600;
+$color6:#ff7600;
 $color7:#DFDFDF;
 $color8:#F1F1F1;
 $color9:#E7E7E7;
@@ -35,6 +36,26 @@ html {
     position: relative;
     background-color: $color8;
 }
+
+.html.html.html.html {
+    @include Sauna-adaptive.breakpoint27 {
+        font-size: 53%;
+    }
+}
+
+.html.html.html {
+    @include Sauna-adaptive.breakpoint26 {
+        font-size: 55%;
+    }
+}
+
+.html.html {
+    @include Sauna-adaptive.breakpoint25 {
+        font-size: 58%;
+    }
+}
+
+
 
 
 .body {
@@ -88,39 +109,55 @@ html {
 
     .header {
         width: 100%;
-        z-index: 3;
+        z-index: 1000;
+        position: relative;
         //position: absolute;
         margin-top: 0.5rem;
 
         &__container {
             display: flex;
             justify-content: space-around;
+            //justify-content: space-between;
+            //border: 0.2rem solid $color6;
+          
 
-            @supports (justify-content: space-evenly) {
-                justify-content: space-evenly;
+            // @supports (justify-content: space-evenly) {
+            //     justify-content: space-evenly;
+            // }
+        }
+
+        .header__container.header__container {
+            @include Sauna-adaptive.breakpoint1 {
+                justify-content: space-between;
             }
         }
 
-       /* .text-viza {
-            font-family:$font1;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 3rem;
-            line-height: 4.4rem;
-            color:$color2;
-        }*/
+       
 
         .header-icon {
             height: 6rem;
             width: 7rem;
         }
 
+        .header-icon.header-icon {
+            @include Sauna-adaptive.breakpoint1 {
+                margin-left: 2rem;
+            }
+        }
+
         .map-info {
             display: flex;
             align-self: center;
+            //display: none;
 
             @supports (gap: 1rem) {
                 gap: 1rem;
+            }
+        }
+
+        .map-info.map-info {
+            @include Sauna-adaptive.breakpoint1 {
+                display: none;
             }
         }
 
@@ -163,7 +200,7 @@ html {
         .contact-info {
             display: flex;
             align-self: center;
-           
+            //display: none;
 
             @supports (gap: 1rem) {
                 gap: 1rem;
@@ -216,6 +253,11 @@ html {
             }
         }
 
+        .contact-info.contact-info {
+            @include Sauna-adaptive.breakpoint1 {
+                display: none;
+            }
+        }
 
         .send-btn {
             width: 19.6rem;
@@ -225,6 +267,8 @@ html {
             border: none;
             align-self: center;
             transition: all .3s;
+            
+            //display: none;
 
 
             &:hover {
@@ -247,6 +291,180 @@ html {
             }
         }
 
+        .send-btn.send-btn {
+            @include Sauna-adaptive.breakpoint1 {
+                display: none;
+            }
+        }
+
+        //
+        .sburger-menu {
+            width: 5rem;
+            height: 5rem;
+            border: 0.3rem solid $color6;
+            border-radius: 50%;
+            background-color: $color3;
+            //display: flex;
+            align-self: center;
+            display: none;
+           
+
+            & * + * {
+                z-index: 1000;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &__container {
+               width: 100%;
+               height: 100%;
+               position: relative;
+               //border: 0.1rem solid $color5;
+               //border-radius: 50%;
+
+               .burger-content {
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%,-50%);
+
+                   display: flex;
+                   flex-direction: column;
+                   gap: 0.5rem;
+               }
+
+               .sburger-line {
+                   width: 2rem;
+                   height: 0.2rem;
+                   background-color: $color5;
+               }
+
+               .burger-window {
+                   position: absolute;
+                   top: 100%;
+                   right: 100%;
+                   //margin-top: 0.2rem;
+                   padding: 2rem;
+                   background-color: $color7;
+                   display: none;
+                   flex-direction: column;
+                   gap: 2rem;
+                   border: 0.1rem solid $color6;
+                   border-radius: 0.5rem;
+                   min-width: 20rem;
+                   z-index: 1000;
+                   opacity: 1;
+                   //z-index: 1000;
+                   //width: 25rem;
+
+                   .window-item {
+                       //font-size: 2rem;
+                       align-self: center;
+                       justify-self: center;
+                       list-style-type: none;
+                       text-align: center;
+                       transition: all .2s;
+
+                       &:hover {
+                           cursor: pointer;
+                           transform: scale(1.1);
+                       }
+
+                       .item1-block {
+                           display: flex;
+                           gap: 1rem;
+
+                           .map-pin {
+                               width: 2rem;
+                               height: 3rem;
+                               align-self: center;
+                               justify-self: center;
+                           }
+
+
+                           .tel-logo {
+                            width: 2rem;
+                            height: 3rem;
+                           }
+                       }
+
+
+                          .street-info--shadow {
+                            font-family:$font2;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 1.5rem;
+                            line-height: 1.6rem;
+                            color:$color5;
+                            transition: all .2s;
+            
+                             &:hover {
+                             text-decoration: underline;
+                             }
+                           }
+
+
+                           .tel-info--shadow {
+                            font-family:$font2;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 1.5rem;
+                            line-height: 1.6rem;
+                            color:$color5;
+                            transition: all .2s;
+            
+                             &:hover {
+                             text-decoration: underline;
+                             }
+                           }
+                       }
+
+                      
+
+                       .send-btn--shadow {
+                        width: 12rem;
+                        //height: 3.5rem;
+                        background-color:$color6;
+                        border-radius: 0.5rem;
+                        border: none;
+                        align-self: center;
+                        transition: all .2s;
+                        padding: 0.5rem;
+
+                       &:hover {
+                           cursor: pointer;
+                       }
+            
+                        &:active {
+                            transform: scale(0.9);
+                        }
+            
+                        .btn-text--shadow {
+                            font-family:$font2;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 1.5rem;
+                            line-height: 1.7rem;
+                            color:$color3;
+                        }
+
+                       }
+
+                   }
+
+               }
+
+            }
+
+            .sburger-menu.sburger-menu {
+                @include Sauna-adaptive.breakpoint1 {
+                    display: flex;
+                    margin-right: 2rem;
+                }
+            }
+        }
 
     }
 
@@ -265,9 +483,23 @@ html {
             transform: translateX(10rem);
             display: flex;
             flex-direction: column;
+            //z-index: 100;
+
+            & * + * {
+                z-index: 100;
+            }
 
             @supports (gap: 4rem) {
                 gap: 4rem;
+            }
+        }
+
+        
+
+        .main__container.main__container {
+            @include Sauna-adaptive.breakpoint1 {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
 
@@ -279,7 +511,8 @@ html {
             line-height: 8rem;
              color:$color3;
             white-space: normal;
-    
+           
+           
            
             
 
@@ -292,6 +525,28 @@ html {
             }
         }
 
+        
+
+        .main-text.main-text.main-text.main-text {
+            @include Sauna-adaptive.breakpoint18p5 { 
+                font-size: 3.6rem;
+                line-height: 5rem;
+            }
+        }
+
+        .main-text.main-text.main-text {
+            @include Sauna-adaptive.breakpoint17 { 
+                line-height: 6rem;
+            }
+        }
+
+        .main-text.main-text {
+            @include Sauna-adaptive.breakpoint1 { 
+                font-size: 4rem;
+                line-height: 7rem;
+            }
+        }
+
 
         
 
@@ -299,6 +554,7 @@ html {
             display: flex;
             flex-direction: column;
             margin-top: 4rem;
+           
 
             @supports (gap: 2rem) {
                 gap: 2rem;
@@ -327,6 +583,13 @@ html {
                     border-radius: 50%;
                 }
 
+                .vector-icon.vector-icon {
+                    @include Sauna-adaptive.breakpoint14p5 {
+                       width: 3rem;
+                       height: 3rem;
+                    }
+                }
+
 
                 .list-prop {
                     font-family:$font2;
@@ -338,6 +601,7 @@ html {
                     align-self: center;
                     margin-left:2rem;
                     transition: all .2s;
+                   
 
                     @supports (gap: 1rem) {
                         margin-left: 0;
@@ -401,7 +665,12 @@ html {
             top: 35rem;
             transform: translateY(30rem);
             //background-color: $color8;
-        
+           
+            &__container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
         
             .media-block {
                 position: absolute;
@@ -409,12 +678,14 @@ html {
                 left: 50%;
                 transform: translate(-50%,-50%);
                 width: 70%;
+            
         
                 .block-text {
                     width: 100%;
                     //position: relative;
                     display: flex;
                     flex-direction: column;
+                    
         
                     .title-shadow {
                         font-family: $font1;
@@ -425,6 +696,18 @@ html {
                         color: $color7;
                     }
 
+                    .title-shadow.title-shadow.title-shadow {
+                        @include Sauna-adaptive.breakpoint16 {
+                            font-size: 4rem;
+                            line-height: 5rem;
+                        }
+                    }
+
+                    .title-shadow.title-shadow {
+                        @include Sauna-adaptive.breakpoint4 {
+                            font-size: 5rem;
+                        }
+                    }
 
                     .title-real {
                         font-family: $font1;
@@ -440,6 +723,30 @@ html {
                         .real-color {
                             color: $color6;
                         }
+                    }
+
+                    .title-real.title-real {
+                        @include Sauna-adaptive.breakpoint4 {
+                            font-size: 2.4rem;
+                        }
+                    }
+                }
+
+                .block-text.block-text.block-text.block-text {
+                    @include Sauna-adaptive.heightFix4 {
+                        margin-top: 3rem;
+                    }
+                }
+
+                .block-text.block-text.block-text {
+                    @include Sauna-adaptive.heightFix3 {
+                        margin-top: 2rem;
+                    }
+                }
+
+                .block-text.block-text {
+                    @include Sauna-adaptive.breakpoint16 {
+                        text-align: center;
                     }
                 }
 
@@ -464,7 +771,7 @@ html {
                         border-radius: 0.5rem;
                         border: none;
                         position: relative;
-
+                       
 
                         .main-icon {
                             display: block;
@@ -489,7 +796,7 @@ html {
                         width: 100%;
                         display: flex;
                         justify-content:space-between;
-                        
+                       
 
 
                         .photo-item {
@@ -498,7 +805,7 @@ html {
                             transition: all .2s;
                             border-radius: 0.5rem;
                             border: none;
-
+                            
 
                             &:hover {
                                 transform: scale(1.4);
@@ -506,8 +813,27 @@ html {
 
                             }
                         }
+
+                        .photo-item.photo-item {
+                            @include Sauna-adaptive.breakpoint2 {
+                                width: 0;
+                                flex-grow: 1;
+                            }
+                        }
                     }
 
+                    .bottom-photos.bottom-photos.bottom-photos {
+                        @include Sauna-adaptive.breakpoint3 {
+                            display: none;
+                        }
+                    }
+
+                    .bottom-photos.bottom-photos {
+                        @include Sauna-adaptive.breakpoint2 {
+                            justify-content: 0;
+                            gap: 1rem;
+                        }
+                    }
 
                     .btn-bottom {
                         width: 26.4rem;
@@ -519,6 +845,7 @@ html {
                         align-self: center;
                         justify-self: center;
                         //margin-top: 4rem;
+                       
             
                         @supports (gap:4rem) {
                            margin-top: 0;
@@ -547,7 +874,41 @@ html {
                 }
 
             }
+
+            .media-block.media-block {
+                @include Sauna-adaptive.breakpoint21 {
+                    width: 100%;
+                }
+            }
         
+        }
+
+        .section-media.section-media.section-media.section-media.section-media {
+            @include Sauna-adaptive.heightFix4 {
+                top: 42rem;
+                transform: translateY(42rem);
+            }
+        }
+
+        .section-media.section-media.section-media.section-media {
+            @include Sauna-adaptive.heightFix2 {
+                top: 40rem;
+                transform: translateY(40rem);
+            }
+        }
+
+        .section-media.section-media.section-media {
+            @include Sauna-adaptive.heightFix1 {
+                top: 38rem;
+                transform: translateY(38rem);
+            }
+        }
+
+        .section-media.section-media {
+            @include Sauna-adaptive.breakpoint25 {
+                top: 38rem;
+                transform: translateY(38rem);
+            }
         }
 
 
@@ -563,6 +924,7 @@ html {
             top: 70rem;
             transform: translateY(70rem);
             //border: 0.1rem solid black;
+           
 
              &__container {
                  position: relative;
@@ -587,7 +949,6 @@ html {
                     display: flex;
                     flex-direction: column;
 
-
                     .title-shadow1 {
                         font-family: $font1;
                         font-style: normal;
@@ -596,6 +957,25 @@ html {
                         line-height: 7rem;
                         color: $color7;
                         //position: absolute;
+                    }
+
+                    .title-shadow1.title-shadow1.title-shadow1.title-shadow1 {
+                        @include Sauna-adaptive.breakpoint23 {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    .title-shadow1.title-shadow1.title-shadow1 {
+                        @include Sauna-adaptive.breakpoint17 {
+                            font-size: 4rem;
+                        }
+                    }
+
+                    .title-shadow1.title-shadow1 {
+                        @include Sauna-adaptive.breakpoint14 {
+                            font-size: 5rem;
+                            line-height: 6rem;
+                        }
                     }
 
 
@@ -612,6 +992,19 @@ html {
                             color: $color6;
                         }
                     }
+
+                    .title-real1.title-real1 {
+                        @include Sauna-adaptive.breakpoint14 {
+                            font-size: 2.4rem;
+                            line-height: 5rem;
+                        }
+                    }
+                }
+
+                .block-text-main.block-text-main {
+                    @include Sauna-adaptive.breakpoint5 {
+                        text-align: center;
+                    }
                 }
 
                 .conditions-box {
@@ -620,22 +1013,31 @@ html {
                     display: flex;
                     flex-direction: column;
                     gap: 4rem;
+                   
 
                     .box-item {
                         display: flex;
                         justify-content: space-between;
                         //gap: 3rem;
+                        
 
                         .conditions-inf {
                             display: flex;
                             gap: 1rem;
                             height: 24rem;
+                           
 
                             .conditions-img {
                                 width: 28rem;
                                 height: 100%;
                                 border-radius: 0.5rem;
                                 border: none;
+                            }
+
+                            .conditions-img.conditions-img {
+                                @include Sauna-adaptive.breakpoint18 {
+                                    display: none;
+                                }
                             }
 
 
@@ -652,6 +1054,18 @@ html {
                                   font-size: 2rem;
                                   line-height: 3rem;
                                   white-space: pre-line;
+                              }
+
+                              .cond-title.cond-title {
+                                @include Sauna-adaptive.breakpoint18 {
+                                    color: $color3;
+                                    text-shadow:
+                                      0.2rem  0.2rem 0 #000,
+                                     -0.1rem -0.1rem 0 #000,  
+                                      0.1rem -0.1rem 0 #000,
+                                     -0.1rem  0.1rem 0 #000,
+                                      0.1rem  0.1rem 0 #000;
+                                }
                               }
 
 
@@ -676,6 +1090,24 @@ html {
                                           align-self: center;
                                           white-space: nowrap;
                                       }
+
+                                      .point-text.point-text {
+                                        @include Sauna-adaptive.breakpoint18 {
+                                            color: $color3;
+                                            text-shadow:
+                                              0.2rem  0.2rem 0 #000,
+                                             -0.1rem -0.1rem 0 #000,  
+                                              0.1rem -0.1rem 0 #000,
+                                             -0.1rem  0.1rem 0 #000,
+                                              0.1rem  0.1rem 0 #000;
+                                        }
+                                      }
+                                  }
+
+                                  .itm-con-del.itm-con-del {
+                                      @include Sauna-adaptive.breakpoint13 {
+                                          display: none;
+                                      }
                                   }
 
 
@@ -692,7 +1124,47 @@ html {
                                 gap: 2rem;
                                 height: 100%;
                               }
+
+                              .list--gap.list--gap {
+                                @include Sauna-adaptive.breakpoint18 {
+                                    gap: 1rem;
+                                }
+                              }
                           }
+
+                          .conditions-text.conditions-text {
+                            @include Sauna-adaptive.breakpoint18 {
+                               width: 25rem;
+                               //height: 25rem;
+                               margin: 0 auto;
+                               border-radius: 0.5rem;
+                               border: none;
+                               padding-left: 2rem;
+                               //padding: 2rem 3rem;
+                              }
+                          }
+
+                          .img-block1.img-block1 {
+                            @include Sauna-adaptive.breakpoint18 {
+                                background-image: url(../Sauna__template/img/get-img1.jpg);
+                                background-size: cover;
+                            }
+                          }
+
+                          .img-block2.img-block2 {
+                            @include Sauna-adaptive.breakpoint18 {
+                                background-image: url(../Sauna__template/img/get-img3.jpg);
+                                background-size: cover;
+                            }
+                          }
+
+                          .img-block3.img-block3 {
+                            @include Sauna-adaptive.breakpoint18 {
+                                background-image: url(../Sauna__template/img/get-img2.jpg);
+                                background-size: cover;
+                            }
+                          }
+                         
 
 
                           .text--gap {
@@ -703,9 +1175,61 @@ html {
                             gap: 2rem;
                         }
                         }
+
+                        .conditions-inf.conditions-inf.conditions-inf {
+                            @include Sauna-adaptive.breakpoint20 {
+                                width: 100%;
+                                min-width: 25rem;
+                             }
+                        }
+                       
+
+
+                        .conditions-inf.conditions-inf {
+                            @include Sauna-adaptive.breakpoint5 {
+                                //flex-grow: 1;
+                                width: 51.6rem;
+                            }
+                        }
+
+
+
+
+
+                        .cond-shadow-block.cond-shadow-block {
+                            @include Sauna-adaptive.breakpoint5 {
+                                display: none;
+                            }
+                        }
+                    }
+
+                   
+
+                    .box-item.box-item {
+                        @include Sauna-adaptive.breakpoint5 {
+                            justify-content: 0;
+                            gap: 2rem;
+                            flex-direction: column;
+                            //justify-self: center;
+                        }
                     }
                 }
 
+                .conditions-box.conditions-box {
+                    @include Sauna-adaptive.breakpoint5 {
+                        gap: 2rem;
+                        //flex-direction: 0;
+                        align-items: center;
+                        justify-items: center;
+                    }
+                } 
+
+            }
+
+            .conditions-block.conditions-block {
+                @include Sauna-adaptive.breakpoint23 {
+                    width: 100%;
+                }
             }
         }
 
@@ -760,6 +1284,34 @@ html {
                             //position: absolute;
                         }
 
+                        .title-shadow2.title-shadow2.title-shadow2.title-shadow2.title-shadow2 {
+                            @include Sauna-adaptive.breakpoint22 {
+                                font-size: 2.5rem;
+                                //line-height: 3rem;
+                            }
+                        }
+
+                        .title-shadow2.title-shadow2.title-shadow2.title-shadow2 {
+                            @include Sauna-adaptive.breakpoint21 {
+                                font-size: 3rem;
+                                //line-height: 3rem;
+                            }
+                        }
+
+                        .title-shadow2.title-shadow2.title-shadow2 {
+                            @include Sauna-adaptive.breakpoint17 {
+                                font-size: 4rem;
+                                line-height: 4rem;
+                            }
+                        }
+
+                        .title-shadow2.title-shadow2 {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 5rem;
+                                line-height: 5rem;
+                            }
+                        }
+
 
                         .title-real2 {
                             font-family: $font1;
@@ -773,6 +1325,26 @@ html {
                             .real-color2 {
                                 color: $color6;
                             }
+                        }
+
+                        // .title-real2.title-real2.title-real2 {
+                        //     @include Sauna-adaptive.breakpoint22{
+                        //         line-height: 4rem;
+                        //     }
+                        // }
+
+                        .title-real2.title-real2 {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 2rem;
+                                line-height: 5rem;
+                            }
+                        }
+
+                    }
+
+                    .text-block.text-block {
+                        @include Sauna-adaptive.breakpoint14 {
+                           text-align: center;
                         }
                     }
 
@@ -797,6 +1369,45 @@ html {
                                 margin-top: 3rem;
                             }
                         }
+                    }
+
+                    .paragraph-block.paragraph-block.paragraph-block {
+                        @include Sauna-adaptive.breakpoint17 {
+                            top: 6rem;
+                            transform: translate(-50%,6rem);
+                        }
+                    }
+
+                    .paragraph-block.paragraph-block {
+                        @include Sauna-adaptive.breakpoint14 {
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+
+                .place-content.place-content.place-content.place-content {
+                    @include Sauna-adaptive.breakpoint22 {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .place-content.place-content.place-content {
+                    @include Sauna-adaptive.breakpoint14 {
+                        width: 85%;
+                    }
+                }
+
+
+                .place-content.place-content {
+                    @include Sauna-adaptive.breakpoint5 {
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
                     }
                 }
             }
@@ -842,6 +1453,13 @@ html {
                         //position: absolute;
                     }
 
+                    .stocks-shadow.stocks-shadow {
+                        @include Sauna-adaptive.breakpoint14 {
+                            font-size: 5rem;
+                            line-height: 6rem;
+                        }
+                    }
+
 
                     .stocks-real {
                         font-family: $font1;
@@ -856,6 +1474,19 @@ html {
                             color: $color6;
                         }
                     }
+
+                    .stocks-real.stocks-real {
+                        @include Sauna-adaptive.breakpoint14 {
+                            font-size: 2rem;
+                            line-height: 5rem;
+                        }
+                    }
+                }
+
+                .stocks-title.stocks-title {
+                    @include Sauna-adaptive.breakpoint15 {
+                       text-align: center;
+                     }
                 }
 
                 .stocks-content {
@@ -897,6 +1528,14 @@ html {
                             white-space: nowrap;
                         }
 
+                        .block-title.block-title {
+                            @include Sauna-adaptive.breakpoint23 {
+                                font-size: 1.7rem;
+                                align-self: center;
+                                justify-self: center;
+                            }
+                        }
+
 
                         .block-paragraph {
                             font-family: $font2;
@@ -907,7 +1546,34 @@ html {
                             color: $color5;
                         }
                     }
+
+                    .content-block.content-block.content-block {
+                        @include Sauna-adaptive.breakpoint23 {
+                            width: 100%;
+                            margin: 0;
+                        }
+                    }
+
+                    .content-block.content-block {
+                        @include Sauna-adaptive.breakpoint15 {
+                           margin: 0 auto;
+                        }
+                    }
+
+                    .stocks-del1.stocks-del1.stocks-del1 {
+                        @include Sauna-adaptive.breakpoint15 {
+                            display: none;
+                        }
+                    }
+
+                    .stocks-del.stocks-del {
+                        @include Sauna-adaptive.breakpoint9 {
+                            display: none;
+                        }
+                    }
                 }
+
+                
 
 
                 .stocks-warning {
@@ -924,6 +1590,18 @@ html {
                     text-align: center;
                 }
 
+                .stocks-warning.stocks-warning {
+                    @include Sauna-adaptive.breakpoint21 {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .stocks-container.stocks-container {
+                @include Sauna-adaptive.breakpoint23 {
+                     width: 100%;
+                }
             }
         }
 
@@ -937,6 +1615,7 @@ html {
             transform: translateY(200rem);
             background-image: url(../Sauna__template/img/rest-bg.jpg);
             background-size: cover;
+            overflow: hidden;
 
 
             .rest-content {
@@ -956,6 +1635,12 @@ html {
                     width: 45rem;
                     border-radius: 0.5rem;
                     border: none;
+                }
+
+                .rest-img.rest-img {
+                    @include Sauna-adaptive.breakpoint9 {
+                        display: none;
+                    }
                 }
 
 
@@ -978,6 +1663,22 @@ html {
                             white-space: pre-wrap;
                         }
 
+                        .rest-shadow.rest-shadow {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 5rem;
+                                line-height: 5rem;
+                            }
+                        }
+
+                       
+
+                        // .rest-shadow.rest-shadow  {
+                        //     @include Sauna-adaptive.breakpoint6 {
+                        //         font-size: 5rem;
+                        //         line-height: 5rem;
+                        //     }
+                        // }
+
                         .rest-real {
                         font-family: $font1;
                         font-style: normal;
@@ -991,13 +1692,36 @@ html {
                             color: $color6;
                           }
                         } 
+
+                        .rest-real.rest-real.rest-real {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 2rem;
+                                line-height: 5rem;
+                            }
+                        }
+
+
+
+                        .rest-real.rest-real {
+                            @include Sauna-adaptive.breakpoint9 {
+                                margin-top: -3rem;
+                            }
+                        }
+
                     }
+
+                    .rest-title.rest-title {
+                        @include Sauna-adaptive.breakpoint9 {
+                            text-align: center;
+                        }
+                    } 
 
                     //
                     .rest-main {
                         display: flex;
                         flex-direction: column;
                         gap: 2rem;
+                       
 
                         .description-title {
                             font-family: $font1;
@@ -1008,6 +1732,13 @@ html {
                             color: $color5;
                         }
 
+                        // .description-title.description-title {
+                        //     @include Sauna-adaptive.breakpoint6 {
+                        //         font-size: 1.5rem;
+                        //         line-height: 2rem;
+                        //     }
+                        // }
+
 
                         .description-main {
                             font-family: $font2;
@@ -1017,6 +1748,18 @@ html {
                             line-height: 2.5rem;
                             color: $color5;
                             white-space: pre-line;
+                        }
+
+                        .description-main.description-main.description-main {
+                            @include Sauna-adaptive.breakpoint21 {
+                                 display: none;
+                            }
+                        }
+
+                        .description-main.description-main {
+                            @include Sauna-adaptive.breakpoint6 {
+                                line-height: 2rem;
+                            }
                         }
 
 
@@ -1049,6 +1792,14 @@ html {
                                     align-self: center;
                                 }
                             }
+
+                            // .dlist-item.dlist-item {
+                            //     @include Sauna-adaptive.breakpoint9 {
+                            //         align-items: center;
+                            //         justify-items: center;
+                            //         text-align: center;
+                            //     }
+                            // }
                         }
 
 
@@ -1060,7 +1811,33 @@ html {
                             line-height: 2.5rem;
                             color: $color5;
                         }
+
+                        .description-bottom.description-bottom {
+                            @include Sauna-adaptive.breakpoint6 {
+                                display: none;
+                            }
+                        }
                     }
+
+                    .rest-main.rest-main.rest-main  {
+                        @include Sauna-adaptive.breakpoint9 {
+                            & * + * {
+                                flex-grow: 0;
+                                flex-shrink: 1;
+                            }
+                        }
+                    }
+
+                    .rest-main.rest-main {
+                        @include Sauna-adaptive.breakpoint8 {
+                            & * + * {
+                                flex-grow: 1;
+                                flex-shrink: 0;
+                            }
+                        }
+                    }
+
+                   
 
 
 
@@ -1072,6 +1849,7 @@ html {
                         border-radius: 0.5rem;
                         border: none;
                         transition: all .3s;
+                        flex-shrink: 0;
 
                         &:hover {
                             transform: scale(1.1);
@@ -1091,6 +1869,35 @@ html {
                             color:$color3;
                         }
                     }
+                }
+
+                .rest-block.rest-block.rest-block.rest-block {
+                    @include Sauna-adaptive.breakpoint21 {
+                        justify-content: space-around;
+                    }
+                }
+
+                .rest-block.rest-block.rest-block {
+                    @include Sauna-adaptive.breakpoint9 {
+                        justify-content: space-between;
+                        align-items: center;
+                        justify-items: center;
+                        //text-align: center;
+                        //gap: 1.5rem;
+                    }
+                }
+
+                .rest-block.rest-block {
+                    @include Sauna-adaptive.breakpoint6 {
+                        justify-content: space-evenly;
+                        //gap: 1.5rem;
+                    }
+                }
+            }
+
+            .rest-content.rest-content {
+                @include Sauna-adaptive.breakpoint23 {
+                    width: 100%;
                 }
             }
         }
@@ -1116,6 +1923,7 @@ html {
                 //border: 0.1rem solid black;
                 display: flex;
                 flex-direction: column;
+                
 
                 .set-title {
                     width: 100%;
@@ -1133,6 +1941,20 @@ html {
                         //white-space: pre-line;
                     }
 
+                    .set-shadow.set-shadow.set-shadow {
+                        @include Sauna-adaptive.breakpoint17 {
+                            font-size: 4rem;
+                            line-height: 5rem;
+                        }
+                    }
+
+                    .set-shadow.set-shadow {
+                        @include Sauna-adaptive.breakpoint14 {
+                            font-size: 5rem;
+                            line-height: 6rem;
+                        }
+                    }
+
                     .set-real {
                         font-family: $font1;
                         font-style: normal;
@@ -1146,7 +1968,26 @@ html {
                             color: $color6;
                           }
                     }
+
+                    .set-real.set-real.set-real {
+                        @include Sauna-adaptive.breakpoint21 {
+                            line-height: 3rem;
+                        }
+                    }
+
+                    .set-real.set-real {
+                        @include Sauna-adaptive.breakpoint14 {
+                            font-size: 2rem;
+                            line-height: 5rem;
+                        }
+                    }
                 }
+
+                .set-title.set-title  {
+                    @include Sauna-adaptive.breakpoint15 {
+                        text-align: center;
+                    }
+                } 
 
                 //
                 .set-content {
@@ -1154,21 +1995,29 @@ html {
                     flex-direction: column;
                     gap: 3rem;
                     margin-top: 5rem;
-
+                   
 
                     &__box {
                         display: flex;
                         justify-content: space-between;
+                        
 
                         .box-inside {
                             display: flex;
                             flex-direction: column;
                             gap: 2rem;
+                           
 
                             .inside-img {
                                 width: 30rem;
                                 height: 20rem;
                                 border-radius: 0.5rem;
+                            }
+
+                            .inside-img.inside-img {
+                                @include Sauna-adaptive.breakpoint23 {
+                                    width: 100%;
+                                }
                             }
 
 
@@ -1180,8 +2029,60 @@ html {
                                 line-height: 3rem;
                                 color: $color5;
                             }
+
+                            .inside-title.inside-title {
+                                @include Sauna-adaptive.breakpoint23 {
+                                     align-self: center;
+                                     justify-self: center;
+                                }
+                            }
+
+                        }
+
+                        .box-inside.box-inside {
+                            @include Sauna-adaptive.breakpoint23 {
+                                width: 100%;
+                            }
+                        }
+
+                        .set-del1.set-del1.set-del1 {
+                            @include Sauna-adaptive.breakpoint15 {
+                                display: none;
+                            }
+                        }
+
+                        .set-del.set-del {
+                            @include Sauna-adaptive.breakpoint9 {
+                                display: none;
+                            }
                         }
                     }
+
+                    .set-content__box.set-content__box.set-content__box.set-content__box {
+                        @include Sauna-adaptive.breakpoint15 {
+                           align-items: center;
+                           justify-items: center;
+                        }
+                    }
+
+                    .set-content__box.set-content__box.set-content__box {
+                        @include Sauna-adaptive.breakpoint9 {
+                            justify-content: space-around;
+                        }
+                    }
+
+                    .set-content__box.set-content__box {
+                        @include Sauna-adaptive.breakpoint7 {
+                            justify-content: 0;
+                            gap: 2rem;
+                        }
+                    }
+                }
+            }
+
+            .set-container.set-container {
+                @include Sauna-adaptive.breakpoint23 {
+                   width: 100%;
                 }
             }
         }
@@ -1204,7 +2105,7 @@ html {
                display: flex;
                flex-direction: column;
                justify-content: space-around;
-
+              
 
 
                .bar-title {
@@ -1222,6 +2123,12 @@ html {
                     line-height: 7rem;
                     color: $color8;
                     opacity: 0.2;
+                   }
+
+                   .bar-shadow.bar-shadow {
+                      @include Sauna-adaptive.breakpoint23 {
+                        font-size: 5rem;
+                      }
                    }
 
 
@@ -1316,6 +2223,25 @@ html {
 
                    }
 
+                   .item-bar-del2.item-bar-del2.item-bar-del2.item-bar-del2  {
+                    @include Sauna-adaptive.breakpoint18 {
+                        display: none;
+                    }
+                  }
+
+                   .item-bar-del1.item-bar-del1.item-bar-del1  {
+                    @include Sauna-adaptive.breakpoint14 {
+                        display: none;
+                    }
+                  }
+
+
+                   .item-bar-del.item-bar-del {
+                       @include Sauna-adaptive.breakpoint9 {
+                           display: none;
+                       }
+                   }
+
 
                    .content--top1 {
                        margin-top: -10rem;
@@ -1333,6 +2259,19 @@ html {
                     margin-top: -5rem;
                    }
 
+               }
+
+               .bar-items.bar-items.bar-items {
+                @include Sauna-adaptive.breakpoint9 {
+                    justify-content: center;
+                }
+              }
+
+               .bar-items.bar-items {
+                   @include Sauna-adaptive.breakpoint7 {
+                       justify-content:normal;
+                       gap: 2rem;
+                   }
                }
  
 
@@ -1361,6 +2300,12 @@ html {
                     position: absolute;
                     left: 0;
                     bottom: 0;
+                }
+
+                .hotel-statue.hotel-statue {
+                    @include Sauna-adaptive.breakpoint22 {
+                        display: none;
+                    }
                 }
 
 
@@ -1435,6 +2380,12 @@ html {
                         }
                     }
 
+                    .box-photos.box-photos {
+                        @include Sauna-adaptive.breakpoint9 {
+                            display: none;
+                        }
+                    }
+
 
                     //
                     .box-text {
@@ -1457,6 +2408,12 @@ html {
                                 color: $color7;
                             }
 
+                            .hotel-shadow.hotel-shadow {
+                                @include Sauna-adaptive.breakpoint24 {
+                                   font-size: 5rem;
+                                }
+                            }
+
                             .hotel-real {
                                 font-family: $font1;
                                 font-style: normal;
@@ -1469,6 +2426,14 @@ html {
                                   .hotel-color {
                                     color: $color6;
                                   }
+                            }
+
+
+
+                            .hotel-real.hotel-real {
+                                @include Sauna-adaptive.breakpoint9 {
+                                    margin-top: -4rem;
+                                }
                             }
 
                         }
@@ -1485,6 +2450,20 @@ html {
 
                             .text-deal--p {
                                 margin-top: 4rem;
+                            }
+                        }
+
+                        .hotel-text-deal.hotel-text-deal.hotel-text-deal {
+                            @include Sauna-adaptive.breakpoint24 {
+                                //color: $color3;
+                               display: none;
+                            }
+                        }
+
+                        .hotel-text-deal.hotel-text-deal {
+                            @include Sauna-adaptive.breakpoint9 {
+                                //color: $color3;
+                                font-weight: 800;
                             }
                         }
 
@@ -1519,6 +2498,18 @@ html {
                                     align-self: center;
                                 }
 
+                                .box-text.box-text {
+                                    @include Sauna-adaptive.breakpoint9 {
+                                        color: $color3;
+                                    }
+                                }
+
+                            }
+
+                            .hotel-del.hotel-del {
+                                @include Sauna-adaptive.breakpoint24 {
+                                    display: none;
+                                }
                             }
                         }
 
@@ -1551,7 +2542,50 @@ html {
                             }
                         }
                     }
+
+                    .box-text.box-text.box-text {
+                        @include Sauna-adaptive.breakpoint23 {
+                           width: 100%;
+                        }
+                    }
+
+                    .box-text.box-text {
+                        @include Sauna-adaptive.breakpoint9 {
+                            align-self: center;
+                            justify-self: center;
+                            align-items: center;
+                            justify-items: center;
+                            text-align: center;
+                        }
+                    }
                 }
+
+                .hotel-content-box.hotel-content-box.hotel-content-box {
+                    @include Sauna-adaptive.breakpoint22 {
+                       width: 100%;
+                    }
+                }
+
+                .hotel-content-box.hotel-content-box {
+                    @include Sauna-adaptive.breakpoint9 {
+                        gap: 0;
+                        background-image: url(../Sauna__template/img/hotel-img1.jpg);
+                        background-color: rgba(255,255,255,0.5);
+                        background-size: cover;
+                        background-blend-mode: darken;
+                        padding: 2rem;
+                        border-radius: 0.5rem;
+                        border: none;
+                       
+                    }
+                }
+            }
+        }
+
+        .section-hotel.section-hotel {
+            @include Sauna-adaptive.breakpoint24 {
+                //font-size: 60%;
+                overflow: hidden;
             }
         }
 
@@ -1598,6 +2632,20 @@ html {
                             white-space: pre-line;
                         }
 
+                        .party-shadow.party-shadow.party-shadow {
+                            @include Sauna-adaptive.breakpoint23 {
+                                font-size: 4rem;
+                                //line-height: 5rem;
+                            }
+                        }
+
+                        .party-shadow.party-shadow {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 5rem;
+                                line-height: 5rem;
+                            }
+                        }
+
                         .party-real {
                             font-family: $font1;
                             font-style: normal;
@@ -1611,6 +2659,20 @@ html {
                                 color: $color6;
                               }
                         }
+
+                        .party-real.party-real {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 2rem;
+                                line-height: 5rem;
+                            }
+                        }
+
+                    }
+
+                    .box-title-text.box-title-text {
+                        @include Sauna-adaptive.breakpoint15 {
+                            text-align: center;
+                       }
                     }
 
 
@@ -1640,6 +2702,12 @@ html {
                                    border: none;
                                }
 
+                               .party-img.party-img {
+                                  @include Sauna-adaptive.breakpoint23 {
+                                      width: 100%;
+                                  }
+                               }
+
 
                                .party-p {
                                    font-family: $font1;
@@ -1651,12 +2719,45 @@ html {
                                }
                             }
 
+                            .flex-content.flex-content.flex-content.flex-content {
+                                @include Sauna-adaptive.breakpoint23 {
+                                     width: 100%;
+                                }
+                            }
+
+
+                            .flex-content.flex-content.flex-content {
+                                @include Sauna-adaptive.breakpoint15 {
+                                     justify-items: center;
+                                     align-items: center;
+                                }
+                            }
+
+                            .flex-content.flex-content {
+                                @include Sauna-adaptive.breakpoint13 {
+                                     flex-grow: 1;
+                                }
+                            }
+
+                            .flex-del.flex-del {
+                                @include Sauna-adaptive.breakpoint7 {
+                                    display: none;
+                                }
+                            }
+
+                            .party-del.party-del {
+                                @include Sauna-adaptive.breakpoint15 {
+                                    display: none;
+                                }
+                            }
+
                             .flex-content--text {
                               display: flex;
                               flex-direction: column;
                               gap: 2rem;
                               text-align: center;
                               padding: 2rem 0;
+                              
                               
 
                               .flex-paragraph {
@@ -1668,8 +2769,36 @@ html {
                                   color: $color5;
                               }
                             }
+
+                            .flex-content--text.flex-content--text {
+                                @include Sauna-adaptive.breakpoint7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        
+
+                        .main-block.main-block.main-block {
+                            @include Sauna-adaptive.breakpoint13 {
+                                justify-content: normal;
+                                gap: 2rem;
+                            }
+                        }
+
+                        .main-block.main-block {
+                            @include Sauna-adaptive.breakpoint7 {
+                                justify-content: space-around;
+                                //gap: 2rem;
+                            }
                         }
                     } 
+                }
+
+                .party-content-box.party-content-box {
+                    @include Sauna-adaptive.breakpoint23 {
+                         width: 100%;
+                    }
                 }
             }
         }
@@ -1683,14 +2812,14 @@ html {
             position: absolute;
             top: 460rem;
             transform: translateY(460rem);
-            //border: 0.1rem solid black;
+            
 
 
             &__container {
                 width: 100%;
                 height: 100%;
                 position: relative;
-
+                //border: 0.1rem solid black;
 
                 .questions-content {
                     position: absolute;
@@ -1701,12 +2830,13 @@ html {
                     display: flex;
                     flex-direction: column;
                     //border: 0.1rem solid black;
+                   
 
                     .questions-text-title {
                         width: 100%;
                         display: flex;
                         flex-direction: column;
-                        
+                       
 
 
                         .questions-shadow {
@@ -1717,6 +2847,13 @@ html {
                             line-height: 6rem;
                             color: $color7;
                             white-space: pre-line;
+                        }
+
+                        .questions-shadow.questions-shadow {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 5rem;
+                                line-height: 5rem;
+                            }
                         }
 
 
@@ -1733,15 +2870,27 @@ html {
                                 color: $color6;
                               }
                         }
+
+                        .questions-real.questions-real {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 2rem;
+                                line-height: 5rem;
+                            }
+                        }
                     }
 
-
+                    .questions-text-title.questions-text-title {
+                        @include Sauna-adaptive.breakpoint17 {
+                            text-align: center;
+                        }
+                    }
                     
                     .questions-text-main {
                        display: flex;
                        flex-direction: column;
                        margin-top: 5rem;
                        gap: 3rem;
+                      
 
                        .main-block-title {
                           font-family: $font1;
@@ -1752,6 +2901,8 @@ html {
                           color: $color1;
                        }
 
+                      
+
                        .main-block-warning {
                           font-family: $font2;
                           font-style: normal;
@@ -1761,6 +2912,18 @@ html {
                           color: $color5;
                        }
 
+                       .main-block-warning.main-block-warning {
+                        @include Sauna-adaptive.breakpoint19 {
+                            display: none;
+                        }
+                       }
+
+                    }
+
+                    .questions-text-main.questions-text-main {
+                        @include Sauna-adaptive.breakpoint23 {
+                            text-align: center;
+                        }
                     }
 
 
@@ -1770,7 +2933,7 @@ html {
                        display: flex;
                        flex-direction: column;
                        margin-top: 3rem;
-
+                      
 
                        .point-flex {
                            display: flex;
@@ -1779,6 +2942,7 @@ html {
                            border-bottom:  0.1rem solid #BDBDBD;
                            padding: 3rem 0;
                            justify-content: space-between;
+                           
 
                            &:not(:first-child) {
                               border-top: none;
@@ -1795,6 +2959,12 @@ html {
                                //justify-self: left;
                            }
 
+                           .flex-text-item.flex-text-item {
+                              @include Sauna-adaptive.breakpoint23 {
+                                   margin-left: 2rem;
+                               }
+                           }
+
 
                            .flex-icon-item {
                                width: 2rem;
@@ -1806,6 +2976,12 @@ html {
 
                        }
                     }
+                }
+
+                .questions-content.questions-content {
+                    @include Sauna-adaptive.breakpoint23 {
+                        width: 100%;
+                   }
                 }
             }
          }
@@ -1826,7 +3002,7 @@ html {
                  width: 100%;
                  height: 100%;
                  position: relative;
-
+                 //border: 0.1rem solid black;
 
                  .comment-content {
                     position: absolute;
@@ -1836,13 +3012,13 @@ html {
                     width: 75%;
                     display: flex;
                     flex-direction: column;
-
+                   
 
                     .comment-title-text {
                         width: 100%;
                         display: flex;
                         flex-direction: column;
-
+                       
 
                         .comment-shadow {
                             font-family: $font1;
@@ -1851,6 +3027,13 @@ html {
                             font-size: 6rem;
                             line-height: 6rem;
                             color: $color7;
+                        }
+
+                        .comment-shadow.comment-shadow {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 5rem;
+                                line-height: 5rem;
+                            }
                         }
 
 
@@ -1868,8 +3051,21 @@ html {
                               }
                         }
 
+                        .comment-real.comment-real {
+                            @include Sauna-adaptive.breakpoint14 {
+                                font-size: 2rem;
+                                line-height: 5rem;
+                            }
+                        }
 
 
+
+                    }
+
+                    .comment-title-text.comment-title-text {
+                        @include Sauna-adaptive.breakpoint17 {
+                            text-align: center;
+                        }
                     }
 
 
@@ -1895,6 +3091,12 @@ html {
 
 
                  }
+
+                 .comment-content.comment-content {
+                    @include Sauna-adaptive.breakpoint23 {
+                        width: 100%;
+                     }
+                 }
              }
          }
 
@@ -1910,13 +3112,14 @@ html {
             position: absolute;
             top: 585rem;
             transform: translateY(585rem);
+           
 
 
             &__container {
                 width: 100%;
                 height: 100%;
                 position: relative;
-
+               
 
                 .contacts-content {
                     position: absolute;
@@ -1927,17 +3130,18 @@ html {
                     height: 50rem;
                     display: flex;
                     //border: 0.1rem solid white;
-
+                   
 
                     .contacts-text-block {
                         display: flex;
                         flex-direction: column;
-
+                        //border: 0.1rem solid white;
+                       
 
                         .block-main-title {
                             display: flex;
                             flex-direction: column;
-
+                           
 
                             .contacts-shadow {
                               font-family: $font1;
@@ -1990,6 +3194,7 @@ html {
                             gap: 3rem;
                             margin-top: 4rem;
                             margin-left: 1rem;
+                            
 
                             .link-flex-block {
                                 display: flex;
@@ -2013,6 +3218,13 @@ html {
                                    font-size: 1.5rem;
                                    line-height: 3rem;
                                    color: $color3;
+                                }
+                            }
+
+                            .link-flex-block.link-flex-block {
+                                @include Sauna-adaptive.breakpoint13 {
+                                    align-self: center;
+                                    justify-self: center;
                                 }
                             }
                         }
@@ -2048,6 +3260,15 @@ html {
                         }
                     }
 
+                    .contacts-text-block.contacts-text-block {
+                        @include Sauna-adaptive.breakpoint13 {
+                            //align-self: center;
+                            //justify-self: center;
+                            margin: 0 auto;
+                            text-align: center;
+                        }
+                    }
+
 
                     
                     .contacts-map-img {
@@ -2059,13 +3280,57 @@ html {
 
                       
                     }
+
+                    .contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img {
+                        @include Sauna-adaptive.breakpoint13 {
+                            display: none;
+                        }
+                    }
+
+                    .contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img {
+                        @include Sauna-adaptive.breakpoint12 {
+                            width: 36rem;
+                        }
+                    }
+
+                    .contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img {
+                        @include Sauna-adaptive.breakpoint11 {
+                            width: 42rem;
+                        }
+                    }
+
+                    .contacts-map-img.contacts-map-img.contacts-map-img.contacts-map-img {
+                        @include Sauna-adaptive.breakpoint10 {
+                            width: 48rem;
+                        }
+                    }
+
+                    .contacts-map-img.contacts-map-img.contacts-map-img {
+                        @include Sauna-adaptive.breakpoint9 {
+                            width: 54rem;
+                        }
+                    }
+
+                    .contacts-map-img.contacts-map-img {
+                        @include Sauna-adaptive.breakpoint8 {
+                            width: 59rem;
+                        }
+                    }
                 }
+
+                .contacts-content.contacts-content {
+                    @include Sauna-adaptive.breakpoint23 {
+                        width: 100%;
+                    }
+                }
+
+                
             }
          }
     }
 
 
    
-}
+
 
 

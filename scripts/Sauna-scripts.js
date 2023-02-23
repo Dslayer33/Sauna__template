@@ -35,6 +35,11 @@ let questionsReal = document.querySelector('.questions-real');
 let commentShadow = document.querySelector('.comment-shadow');
 let commentReal = document.querySelector('.comment-real');
 let contanctMap = document.querySelector('.contacts-map-img');
+let burgerMenu = document.querySelector('.sburger-menu');
+let burgerMenuWindow = document.querySelector('.burger-window');
+let streetInfoShadow = document.querySelector('.street-info--shadow');
+let telInfoShadow = document.querySelector('.tel-info--shadow');
+let callBtnShadow = document.querySelector('.send-btn--shadow');
 
 let scrollValue = 11850;
 let scrollValueOrigin = 700;
@@ -575,3 +580,51 @@ contactBtn.addEventListener('click',function(e14){
 });
 
 
+burgerMenu.addEventListener('click',function(e15){
+  e15.preventDefault();
+  e15.stopPropagation();
+
+
+  if (burgerMenuWindow.style.display !== 'none'){
+  	burgerMenuWindow.style.display="none";
+  } else {
+  	burgerMenuWindow.style.display="flex";
+  }
+});
+
+
+streetInfoShadow.addEventListener('click',function(e16){
+  e16.preventDefault();
+  e16.stopPropagation();
+  
+ 
+ 
+  //window.scrollTo(0, scrollValue);
+  window.scrollTo({
+      top: scrollValue,
+      behavior: "smooth"
+  });
+});
+
+
+telInfoShadow.addEventListener('click',function(e17){
+  e17.preventDefault();
+  e17.stopPropagation();
+  
+ 
+ 
+  //window.scrollTo(0, scrollValue);
+  window.scrollTo({
+      top: scrollValue,
+      behavior: "smooth"
+  });
+});
+
+
+callBtnShadow.addEventListener('click',function(e18){
+  e18.preventDefault();
+  e18.stopPropagation();
+  setTimeout(function(){
+      mainModal.style.cssText = "display:block;";
+  }, 1000);
+});

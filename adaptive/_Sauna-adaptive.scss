@@ -1,0 +1,156 @@
+ @mixin very-small-screen  {
+     @media screen and (max-width:250px) { @content};
+ }
+
+ @mixin breakpoint1  {
+    @media screen and (max-width:850px) { @content};
+}
+
+@mixin breakpoint2  {
+    @media screen and (max-width:1200px) { @content};
+}
+
+@mixin breakpoint3  {
+    @media screen and (max-width:900px) { @content};
+}
+
+@mixin breakpoint4  {
+    @media screen and (max-width:860px) { @content};
+}
+
+@mixin breakpoint5  {
+    @media screen and (max-width:1225px) { @content};
+}
+
+@mixin breakpoint6  {
+    @media screen and (max-width:1285px) { @content};
+}
+
+@mixin breakpoint7  {
+    @media screen and (max-width:1255px) { @content};
+}
+
+@mixin breakpoint8  {
+    @media screen and (max-width:1200px) { @content};
+}
+
+@mixin breakpoint9  {
+    @media screen and (max-width:1100px) { @content};
+}
+
+@mixin breakpoint10  {
+    @media screen and (max-width:1050px) { @content};
+}
+
+@mixin breakpoint11  {
+    @media screen and (max-width:975px) { @content};
+}
+
+@mixin breakpoint12  {
+    @media screen and (max-width:925px) { @content};
+}
+
+@mixin breakpoint13  {
+    @media screen and (max-width:850px) { @content};
+}
+
+@mixin breakpoint14  {
+    @media screen and (max-width:800px) { @content};
+}
+
+@mixin breakpoint14p5  {
+    @media screen and (max-width:787px) { @content};
+}
+
+@mixin breakpoint15  {
+    @media screen and (max-width:750px) { @content};
+}
+
+@mixin breakpoint16  {
+    @media screen and (max-width:720px) { @content};
+}
+
+@mixin breakpoint17  {
+    @media screen and (max-width:650px) { @content};
+}
+
+@mixin breakpoint18  {
+    @media screen and (max-width:600px) { @content};
+}
+
+@mixin breakpoint18p5  {
+    @media screen and (max-width:588px) { @content};
+}
+
+@mixin breakpoint19  {
+    @media screen and (max-width:550px) { @content};
+}
+
+@mixin breakpoint20  {
+    @media screen and (max-width:537px) { @content};
+}
+
+@mixin breakpoint21  {
+    @media screen and (max-width:500px) { @content};
+}
+
+@mixin breakpoint22  {
+    @media screen and (max-width:416px) { @content};
+}
+
+@mixin breakpoint23  {
+    @media screen and (max-width:365px) { @content};
+}
+
+@mixin breakpoint24  {
+    @media screen and (max-width:388px) { @content};
+}
+
+@mixin breakpoint25  {
+    @media screen and (max-width:300px) { @content};
+}
+
+@mixin breakpoint26  {
+    @media screen and (max-width:280px) { @content};
+}
+
+@mixin breakpoint27  {
+    @media screen and (max-width:260px) { @content};
+}
+
+@mixin breakpoint28  {
+    @media screen and (min-width:1400px) { @content};
+}
+
+@mixin heightFix1  {
+    @media screen and (min-height:680px) { @content};
+}
+
+@mixin heightFix2  {
+    @media screen and (min-height:780px) { @content};
+}
+
+@mixin heightFix3  {
+    @media screen and (min-height:820px) { @content};
+}
+
+@mixin heightFix4  {
+    @media screen and (min-height:850px) { @content};
+}
+// @media screen and (max-width:850px)  {
+//     .map-info.map-info {
+//         display: none;
+//     }
+
+//     .contact-info.contact-info {
+//         display: none;
+//     }
+
+//     .send-btn.send-btn {
+//         display: none;
+//     }
+
+//     .sburger-menu.sburger-menu {
+//         display: flex;
+//     }
+// }
